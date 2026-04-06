@@ -25,8 +25,8 @@ pub fn render(findings: &[Finding], show_matches: bool) {
         println!(
             "{} {} {}:{}",
             severity_label(&f.severity),
-            f.rule_name.bold().to_string(),
-            f.path.blue().to_string(),
+            f.rule_name.bold(),
+            f.path.blue(),
             f.line_number.to_string().dimmed()
         );
         println!("   {} {}", "line:".dimmed(), f.line.trim().dimmed());
