@@ -11,7 +11,11 @@ fn dirty_file() -> NamedTempFile {
     writeln!(f, "# test secrets").unwrap();
     writeln!(f, "GITHUB_TOKEN=ghp_aBcDeFgHiJkLmNoPqRsTuVwXyZ123456ab").unwrap();
     writeln!(f, "-----BEGIN RSA PRIVATE KEY-----").unwrap();
-    writeln!(f, "DB=postgresql://admin:Sup3rS3cr3tP@ssw0rd!@db.example.com:5432/app").unwrap();
+    writeln!(
+        f,
+        "DB=postgresql://admin:Sup3rS3cr3tP@ssw0rd!@db.example.com:5432/app"
+    )
+    .unwrap();
     f
 }
 
