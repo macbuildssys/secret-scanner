@@ -64,7 +64,10 @@ pub fn run_scan(cli: &Cli, config: &Config, ruleset: &RuleSet) -> Result<Vec<Fin
                 return WalkState::Skip;
             }
 
-            if allowlist_paths.iter().any(|a| path_str.contains(a.as_str())) {
+            if allowlist_paths
+                .iter()
+                .any(|a| path_str.contains(a.as_str()))
+            {
                 return WalkState::Skip;
             }
 

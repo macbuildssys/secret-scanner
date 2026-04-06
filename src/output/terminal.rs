@@ -1,6 +1,6 @@
-use owo_colors::OwoColorize;
 use crate::detector::Finding;
 use crate::rules::Severity;
+use owo_colors::OwoColorize;
 
 fn redact(s: &str) -> String {
     let visible = s.chars().take(6).collect::<String>();
@@ -31,17 +31,22 @@ pub fn render(findings: &[Finding], show_matches: bool) {
         );
         println!("   {} {}", "line:".dimmed(), f.line.trim().dimmed());
         if show_matches {
-            println!(
-                "   {} {}",
-                "match:".dimmed(),
-                redact(&f.matched_text)
-            );
+            println!("   {} {}", "match:".dimmed(), redact(&f.matched_text));
         }
     }
 
-    let criticals = findings.iter().filter(|f| f.severity == Severity::Critical).count();
-    let highs = findings.iter().filter(|f| f.severity == Severity::High).count();
-    let mediums = findings.iter().filter(|f| f.severity == Severity::Medium).count();
+    let criticals = findings
+        .iter()
+        .filter(|f| f.severity == Severity::Critical)
+        .count();
+    let highs = findings
+        .iter()
+        .filter(|f| f.severity == Severity::High)
+        .count();
+    let mediums = findings
+        .iter()
+        .filter(|f| f.severity == Severity::Medium)
+        .count();
 
     println!();
     println!(

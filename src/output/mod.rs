@@ -2,8 +2,8 @@ pub mod json;
 pub mod sarif;
 pub mod terminal;
 
-use anyhow::Result;
 use crate::detector::Finding;
+use anyhow::Result;
 
 pub fn write_output(
     findings: &[Finding],

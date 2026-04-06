@@ -1,6 +1,6 @@
+use crate::detector::Finding;
 use anyhow::Result;
 use serde::Serialize;
-use crate::detector::Finding;
 
 #[derive(Serialize)]
 struct JsonFinding<'a> {

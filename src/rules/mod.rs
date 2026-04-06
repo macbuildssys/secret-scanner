@@ -1,7 +1,7 @@
 pub mod builtin;
 
-use regex::Regex;
 use anyhow::{Context, Result};
+use regex::Regex;
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum Severity {

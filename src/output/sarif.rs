@@ -1,7 +1,7 @@
-use anyhow::Result;
-use serde::Serialize;
 use crate::detector::Finding;
 use crate::rules::Severity;
+use anyhow::Result;
+use serde::Serialize;
 
 #[derive(Serialize)]
 struct SarifLog {
