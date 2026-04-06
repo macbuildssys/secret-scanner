@@ -1,0 +1,29 @@
+[package]
+name = "secret-scanner"
+version = "0.1.0"
+edition = "2021"
+description = "A fast secret and credential scanner"
+license = "MIT"
+repository = "https://github.com/macbuildssys/secret-scanner"
+readme = "README.md"
+keywords = ["security", "secrets", "credentials", "scanner", "devsecops"]
+categories = ["command-line-utilities", "development-tools"]
+
+[[bin]]
+name = "secret-scanner"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+regex = "1"
+ignore = "0.4"
+rayon = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+anyhow = "1"
+owo-colors = "4"
+toml = "0.8"
+
+[dev-dependencies]
+tempfile = "3"
+serde_json = "1"

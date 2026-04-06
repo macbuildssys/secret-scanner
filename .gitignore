@@ -1,0 +1,26 @@
+# Build output
+/target
+Cargo.lock
+
+# Editor
+.vscode/
+.idea/
+*.orig
+
+# Scanner output
+*.sarif
+
+# Secret files
+*.pem
+*.key
+*.p12
+*.pfx
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local config override
+.secret-scanner.toml
